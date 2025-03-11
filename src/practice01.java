@@ -1,5 +1,5 @@
 public class practice01 {
-    public int[] solution ( int[] num_list, int n){
+    public int[] solution(int[] num_list, int n) {
         int size = (num_list.length + n - 1) / n;
         int[] answer = new int[size];
 
