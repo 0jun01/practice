@@ -1,5 +1,7 @@
+import java.util.Arrays;
+
 public class practice01 {
-    public int[] solution(int[] num_list, int n) {
+    public static int[] solution(int[] num_list, int n) {
         int size = (num_list.length + n - 1) / n;
         int[] answer = new int[size];
 
@@ -12,6 +14,13 @@ public class practice01 {
     }
 
     public static void main(String[] args) {
+        int[] da = new int[5];
+        for (int i = 0; i < da.length - 1; i++) {
+            da[i] = i;
+        }
 
+        int[] ds = solution(da,3);
+
+        System.out.println(Arrays.toString(ds));
     }
 }
