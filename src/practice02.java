@@ -4,10 +4,22 @@ public class practice02 {
     public int[] solution(int[] num_list, int n) {
         int[] answer = new int[n];
 
-        for(int i = 0 ; i <= n-1 ; i ++){
+        for (int i = 0; i <= n - 1; i++) {
             answer[i] = num_list[i];
         }
 
         return answer;
     }
+
+    public int[] solution2(int[] num_list, int n) {
+        int[] answer = new int[num_list.length];  // 배열 크기를 올바르게 설정
+
+        for (int i = 0; i < num_list.length; i++) { // i 범위 수정
+            answer[i] = num_list[(n + i) % num_list.length]; // 인덱스 조정
+        }
+
+        return answer;
+    }
 }
+
+
