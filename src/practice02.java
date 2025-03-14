@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class practice02 {
     // 정수 리스트 num_list와 정수 n이 주어질 때, num_list의 첫 번째 원소부터 n 번째 원소까지의 모든 원소를 담은 리스트를 return하도록 solution 함수를 완성해주세요.
 
@@ -40,6 +42,42 @@ public class practice02 {
         }
 
         return -1;
+    }
+
+    public static int[] solution5(int start_num, int end_num) {
+        int[] answer = new int[start_num - end_num +1];
+
+        int index = 0;
+        for(int i = start_num ; i >= end_num ; i--){
+            System.out.println(i);
+            answer[index] = i;
+            index++;
+
+        }
+        return answer;
+    }
+
+    public int[] solution6(int n, int k) {
+        int size = n / k;
+        int[] answer = new int[size];
+        int min = 1;
+        int index = 0;
+
+        for(int i = n; i >= 1 ; i--){
+            if(i % k == 0){
+                answer[index] = i;
+                index++;
+            }
+        }
+
+        Arrays.sort(answer);
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        int[] ad  = solution5(5,3);
+        Arrays.sort(ad);
+        System.out.println(Arrays.toString(ad));
     }
 }
 
