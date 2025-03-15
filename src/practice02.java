@@ -76,8 +76,26 @@ public class practice02 {
 
     public static void main(String[] args) {
         int[] ad  = solution5(5,3);
+        String my_String = "asd";
+
         Arrays.sort(ad);
         System.out.println(Arrays.toString(ad));
+        // 시작 위치
+        System.out.println(my_String.substring(1));
+        // 포함 하는지
+        System.out.println(my_String.endsWith("sd"));
+        // 으로 시작하는지
+        System.out.println(my_String.startsWith("a"));
+
+        // 어떤 문자열에 대해서 접미사는 특정 인덱스부터 시작하는 문자열을 의미합니다. 예를 들어, "banana"의 모든 접미사는 "banana", "anana", "nana", "ana", "na", "a"입니다.
+        String my_String2 = "banana";
+        String[] answer = new String[my_String2.length()];
+
+        for(int i = 0 ; i <= my_String2.length() - 1; i ++){
+            answer[i] = my_String2.substring(i);
+        }
+
+        Arrays.sort(answer);
     }
 }
 
