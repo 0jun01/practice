@@ -97,6 +97,18 @@ public class practice02 {
         return builder.toString();
     }
 
+    // 글자 이어 붙여 문자열 만들기
+    public String solution8(String my_string, int[] index_list) {
+        StringBuilder builder = new StringBuilder();
+
+
+        for (int i = 0; i < my_string.length(); i++) {
+            builder.append(my_string.substring(index_list[i], index_list[i] + 1));
+        }
+
+        return builder.toString();
+    }
+
     public static void main(String[] args) {
         int[] ad = solution5(5, 3);
         String my_String = "asd";
