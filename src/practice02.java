@@ -45,10 +45,10 @@ public class practice02 {
     }
 
     public static int[] solution5(int start_num, int end_num) {
-        int[] answer = new int[start_num - end_num +1];
+        int[] answer = new int[start_num - end_num + 1];
 
         int index = 0;
-        for(int i = start_num ; i >= end_num ; i--){
+        for (int i = start_num; i >= end_num; i--) {
             System.out.println(i);
             answer[index] = i;
             index++;
@@ -63,8 +63,8 @@ public class practice02 {
         int min = 1;
         int index = 0;
 
-        for(int i = n; i >= 1 ; i--){
-            if(i % k == 0){
+        for (int i = n; i >= 1; i--) {
+            if (i % k == 0) {
                 answer[index] = i;
                 index++;
             }
@@ -83,8 +83,22 @@ public class practice02 {
         return answer;
     }
 
+    // 부분 문자열 이어 붙여 문자열 만들기
+    public String solution7(String[] my_strings, int[][] parts) {
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i <= my_strings.length - 1; i++) {
+            int s = parts[i][0];
+            int e = parts[i][1];
+
+            builder.append(my_strings[i].substring(s, e));
+        }
+
+        return builder.toString();
+    }
+
     public static void main(String[] args) {
-        int[] ad  = solution5(5,3);
+        int[] ad = solution5(5, 3);
         String my_String = "asd";
 
         Arrays.sort(ad);
@@ -100,7 +114,7 @@ public class practice02 {
         String my_String2 = "banana";
         String[] answer = new String[my_String2.length()];
 
-        for(int i = 0 ; i <= my_String2.length() - 1; i ++){
+        for (int i = 0; i <= my_String2.length() - 1; i++) {
             answer[i] = my_String2.substring(i);
         }
 
