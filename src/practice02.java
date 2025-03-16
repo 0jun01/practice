@@ -74,6 +74,15 @@ public class practice02 {
         return answer;
     }
 
+    // 문자열의 뒤의 n글자
+    public String solution(String my_string, int n) {
+        String answer = "";
+
+        answer = my_string.substring(my_string.length() - n);
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         int[] ad  = solution5(5,3);
         String my_String = "asd";
@@ -96,6 +105,8 @@ public class practice02 {
         }
 
         Arrays.sort(answer);
+
+
     }
 }
 
