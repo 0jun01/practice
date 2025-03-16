@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class practice02 {
     // 정수 리스트 num_list와 정수 n이 주어질 때, num_list의 첫 번째 원소부터 n 번째 원소까지의 모든 원소를 담은 리스트를 return하도록 solution 함수를 완성해주세요.
@@ -107,6 +109,23 @@ public class practice02 {
         }
 
         return builder.toString();
+    }
+
+    public int[] solution9(int n) {
+        List<Integer> sequence = new ArrayList<>(); // 동적 배열 사용
+
+        while (n != 1) {
+            sequence.add(n); // 현재 값 저장
+            if (n % 2 == 0) {
+                n /= 2; // 짝수면 2로 나눔
+            } else {
+                n = 3 * n + 1;
+            }
+        }
+        sequence.add(1); // 마지막 1 추가
+
+        // 리스트를 int 배열로 변환하여 반환
+        return sequence.stream().mapToInt(i -> i).toArray();
     }
 
     public static void main(String[] args) {
