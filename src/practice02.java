@@ -154,6 +154,25 @@ public class practice02 {
         return result.toString();
     }
 
+    public int solution12(String binomial) {
+        int answer = 0;
+        String[] str = binomial.split(" ");
+
+        int a = Integer.parseInt(str[0]);
+        String op = str[1];
+        int b = Integer.parseInt(str[2]);
+        ;
+
+        if (op.equals("+")) {
+            answer = a + b;
+        } else if (op.equals("-")) {
+            answer = a - b;
+        } else {
+            answer = a * b;
+        }
+        return answer;
+    }
+
     public static void main(String[] args) {
         int[] ad = solution5(5, 3);
         String my_String = "asd";
@@ -180,7 +199,7 @@ public class practice02 {
 
         Arrays.sort(answer);
 
-
+        String asd = "45 + 13";
     }
 }
 
