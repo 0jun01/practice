@@ -128,6 +128,18 @@ public class practice02 {
         return sequence.stream().mapToInt(i -> i).toArray();
     }
 
+    public int[] solution10(int start_num, int end_num) {
+        int size = end_num - start_num + 1;
+        int[] answer = new int[size];
+
+        int index = 0;
+        for (int i = start_num; i <= end_num; i++) {
+            answer[index] = i;
+            index++;
+        }
+        return answer;
+    }
+
     public static void main(String[] args) {
         int[] ad = solution5(5, 3);
         String my_String = "asd";
