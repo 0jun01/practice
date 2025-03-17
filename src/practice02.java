@@ -140,6 +140,20 @@ public class practice02 {
         return answer;
     }
 
+    public String solution11(String myString) {
+        StringBuilder result = new StringBuilder();
+
+        for (char c : myString.toCharArray()) {
+            if (c < 'l') {
+                result.append('l');
+            } else {
+                result.append(c);
+            }
+        }
+
+        return result.toString();
+    }
+
     public static void main(String[] args) {
         int[] ad = solution5(5, 3);
         String my_String = "asd";
@@ -160,6 +174,9 @@ public class practice02 {
         for (int i = 0; i <= my_String2.length() - 1; i++) {
             answer[i] = my_String2.substring(i);
         }
+
+        char a = 'a';
+        System.out.println(a);
 
         Arrays.sort(answer);
 
