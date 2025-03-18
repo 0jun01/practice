@@ -192,10 +192,20 @@ public class practice02 {
         boolean isOdd = (k % 2 == 1); // k가 홀수인지 확인
 
         for (int i = 0; i < arr.length; i++) {
-            answer[i] = isOdd ? arr[i] * k : arr[i] + k;
+            answer[i] = k % 2 == 1 ? arr[i] * k : arr[i] + k;
         }
 
         return answer;
+    }
+
+    public int solutio14(String number) {
+        int answer = 0;
+
+        for(char c : number.toCharArray()){
+            answer += c - '0'; // -'0' 을 함으로써 int로 변환 시킴
+        }
+
+        return answer = answer % 9;
     }
 
     public static void main(String[] args) {
