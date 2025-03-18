@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class practice02 {
     // 정수 리스트 num_list와 정수 n이 주어질 때, num_list의 첫 번째 원소부터 n 번째 원소까지의 모든 원소를 담은 리스트를 return하도록 solution 함수를 완성해주세요.
@@ -201,11 +199,30 @@ public class practice02 {
     public int solutio14(String number) {
         int answer = 0;
 
-        for(char c : number.toCharArray()){
+        for (char c : number.toCharArray()) {
             answer += c - '0'; // -'0' 을 함으로써 int로 변환 시킴
         }
 
         return answer = answer % 9;
+    }
+
+    public int[] solution14(int[] arr, int[] delete_list) {
+        Set<Integer> deleteList = new HashSet<>();
+        // Set을 사용하면 O(1)으로 빠르게 검색 가능.
+
+        List<Integer> answer = new ArrayList<>();
+
+        for (int list : delete_list) {
+            deleteList.add(list);
+        }
+
+        for (int list : arr) {
+            if (!deleteList.contains(list)) {
+                answer.add(list);
+            }
+        }
+
+        return answer.stream().mapToInt(i -> i).toArray();
     }
 
     public static void main(String[] args) {
