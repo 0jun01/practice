@@ -187,6 +187,17 @@ public class practice02 {
         return answer;
     }
 
+    public int[] solution13(int[] arr, int k) {
+        int[] answer = new int[arr.length];
+        boolean isOdd = (k % 2 == 1); // k가 홀수인지 확인
+
+        for (int i = 0; i < arr.length; i++) {
+            answer[i] = isOdd ? arr[i] * k : arr[i] + k;
+        }
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         int[] ad = solution5(5, 3);
         String my_String = "asd";
