@@ -173,6 +173,20 @@ public class practice02 {
         return answer;
     }
 
+    public int solution12(int a, int b) {
+        int answer = 0;
+
+        if (a % 2 == 1 && b % 2 == 1) {
+            answer = (a * a) + (b * b);
+        } else if (a % 2 == 1 || b % 2 == 1) {
+            answer = 2 * (a + b);
+        } else {
+            answer = Math.abs(a - b);
+        }
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         int[] ad = solution5(5, 3);
         String my_String = "asd";
