@@ -236,6 +236,18 @@ public class practice02 {
         return list.toArray(new String[0]);
     }
 
+    public int[] solution15(String myString) {
+
+        String[] result = myString.split("x", -1);
+        int[] answer = new int[result.length];
+
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = result[i].length();
+        }
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         int[] ad = solution5(5, 3);
         String my_String = "asd";
