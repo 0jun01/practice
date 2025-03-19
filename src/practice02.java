@@ -225,6 +225,17 @@ public class practice02 {
         return answer.stream().mapToInt(i -> i).toArray();
     }
 
+    public String[] solution(String[] strArr) {
+        List<String> list = new ArrayList<>();
+
+        for (String str : strArr) {
+            if (!str.contains("ad"))
+                list.add(str);
+        }
+
+        return list.toArray(new String[0]);
+    }
+
     public static void main(String[] args) {
         int[] ad = solution5(5, 3);
         String my_String = "asd";
