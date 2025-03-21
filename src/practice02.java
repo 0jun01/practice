@@ -248,6 +248,17 @@ public class practice02 {
         return answer;
     }
 
+    public int solution16(int[] arr, int idx) {
+        int answer = 0;
+
+        for (int i = idx; i < arr.length; i++) {
+            if (arr[i] == 1) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         int[] ad = solution5(5, 3);
         String my_String = "asd";
